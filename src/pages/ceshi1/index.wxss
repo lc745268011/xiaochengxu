@@ -1,0 +1,21 @@
+/* pages/news/index.wxss */
+.list{background: #fff;height: 120rpx;position: relative;margin-bottom: 20rpx;}
+.leftBtn{width: 19rpx;height: 33rpx;right: 30rpx;}
+.list .avater{width: 100rpx;height: 100rpx;border-radius: 50%;overflow: hidden}
+.list .msg{left: 160rpx;}
+.list .msg .name{font-size: 32rpx;}
+.list .msg .position{font-size: 28rpx;color: #999;margin-left: 10rpx;}
+.star-image {
+  position: relative;
+  top: 50rpx;
+  width: 40rpx;
+  height: 40rpx;
+  src: "../img/normal.png";
+}
+
+.item {
+  position: absolute;
+  top:0;
+  width: 20rpx;
+  height: 40rpx;
+}

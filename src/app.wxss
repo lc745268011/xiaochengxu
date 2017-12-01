@@ -1,0 +1,13 @@
+/**app.wxss**/
+page{
+  font-family: Microsoft YaHei;
+  font-size: 28rpx;
+  background-color: #f6f7fb;
+}
+.l{float: left}
+.r{float: right}
+.cl:after,.clearfix:after{content:".";display:block;height:0;clear:both;visibility:hidden}.cl,.clearfix{zoom:1}
+.p30{padding: 0 30rpx;box-sizing: border-box;width: 100%}
+.center{text-align: center}
+.vCenter{position: absolute;top: 50%;transform: translateY(-50%);}
+ 

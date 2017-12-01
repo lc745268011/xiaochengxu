@@ -1,0 +1,65 @@
+<!--pages/cc-index/index.wxml-->
+<view class='container'>
+  <swiper indicator-dots="{{indicatorDots}}" autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}" indicator-active-color="{{indicatorActiveColor}}" indicator-color="{{indicatorColor}}" class='swiper'>
+    <block wx:for="{{imgUrls}}">
+      <swiper-item>
+        <image src="{{item}}" class="slide-image" width="355" height="150" />
+      </swiper-item>
+    </block>
+  </swiper>
+  <view class='cl msg p30'>
+    <view class='l vCenter'>
+      <view>
+        <text>{{shopName}}</text>
+        <text>{{shopTime}}</text>
+      </view>
+      <view>
+        <image src='/img/zuobiao.png' class='location'></image>
+        <text bindtap='tapMap' data-name='{{shopName}}' data-addr='{{address}}'>{{address}}</text>
+      </view>
+    </view>
+    <view class='r vCenter'>
+      <image src='/img/callphone.png' class='callphone' bindtap="calling"></image>
+    </view>
+  </view>
+  <view class='list p30 cl'>
+    <block wx:for="{{navItems}}" wx:key="id">
+      <view class='l'>
+        <navigator url='{{item.url}}' hover-class="none">
+          <image src='{{item.img}}' class='icon'></image>
+          <view>{{item.name}}</view>
+        </navigator>
+      </view>
+    </block>
+  </view>
+  <view class='productList'>
+    <view class='center'>最新造型
+      <text>HOT</text>
+    </view>
+    <view class='cl'>
+      <block wx:for="{{yhItems}}" wx:key="id">
+        <view class='l yhList'>
+          <view bindtap='goDetail' id="{{item.id}}">
+            <image src='{{item.img}}'></image>
+          </view>
+
+          <view class='bottom p30'>
+            <view class='title' bindtap='goDetail' id="{{item.id}}">{{item.name}}{{item.id}}</view>
+            <view class='cl money'>
+              <view class='l'>
+                <view>原价：¥ {{item.yPrice}}
+                  <view class='line vCenter'></view>
+                </view>
+                <view>¥ {{item.xPrice}}</view>
+              </view>
+              <view class='r'>
+                <navigator class='buyBtn' hover-class='hBuyBtn'>查看</navigator>
+              </view>
+            </view>
+          </view>
+        </view>
+      </block>
+    </view>
+    
+  </view>
+</view>

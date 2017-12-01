@@ -1,0 +1,18 @@
+<view class='container'>
+  <view class='cateLeft'>
+    <block wx:for="{{cateItems}}" wx:key="id">
+      <view bindtap='active' class='{{curNav==item.id?"active":""}}' id="{{item.id}}" data-index="{{index}}">{{item.name}}</view>
+    </block>
+  </view>
+  <view class='cateRight'>
+    <block wx:for="{{cateItems[curIndex].child}}" wx:key="id">
+      <view class='product' bindtap='goDetail' id='{{item.id}}'>
+        <image src='{{item.pic}}'></image>
+        <view class='msg cl'>
+          <view>{{item.name}}</view>
+          <view>{{item.money}}</view>
+        </view>
+      </view>
+    </block>
+  </view>
+</view>

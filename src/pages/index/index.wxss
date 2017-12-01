@@ -1,0 +1,11 @@
+page{background: #fff}
+.cateLeft {position: fixed;left: 0;top: 0;width: 202rpx;font-size: 32rpx;color: #666666;background: #f6f7fb;height: 1110rpx;overflow-y:scroll }
+.cateLeft::-webkit-scrollbar,.cateRight::-webkit-scrollbar{display: none;}
+.cateLeft view{height: 102rpx;width: 202rpx;text-align: center;padding: 0 30rpx;line-height: 102rpx;box-sizing: border-box}
+.cateRight{position: fixed;right: 0;top: 0;overflow-y:scroll;height: 1110rpx;width: 548rpx;padding: 30rpx;box-sizing: border-box }
+.cateRight .product{position: relative;width: 488rpx;height: 262rpx;margin-bottom: 20rpx;border-radius: 10rpx;overflow: hidden}
+.cateRight image{width: 488rpx;height: 262rpx;}
+.cateRight .msg{width: 100%;position: absolute;bottom: 0;height:60rpx ;background-color: rgba(0, 0, 0, 0.6);padding: 0 30rpx;box-sizing: border-box;color: #fff;font-size: 30rpx;line-height: 60rpx;}
+.cateRight .msg view:first-child{width: 50%;float: left;text-align: left;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;}
+.cateRight .msg view:last-child{width: 50%;float: right;text-align: right}
+.cateLeft view.active{color: #23ade5;background: #fff}

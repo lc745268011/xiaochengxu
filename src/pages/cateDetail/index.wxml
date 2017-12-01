@@ -1,0 +1,26 @@
+<!--pages/cateDetail/index.wxml-->
+<view class='container'>
+  <swiper indicator-dots="{{indicatorDots}}" autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}" indicator-active-color="{{indicatorActiveColor}}" indicator-color="{{indicatorColor}}" class='swiper'>
+    <block wx:for="{{imgUrls}}">
+      <swiper-item>
+        <image src="{{item}}" class="slide-image" width="355" height="150" />
+      </swiper-item>
+    </block>
+  </swiper>
+  <view class='p30 msg'>
+    <view class='cl title'>
+      <view class='l'>中医推拿</view>
+      <view class='r'>¥ 299.00</view>
+    </view>
+    <view class='con'>推拿疗法是一门普遍适用于老年、青年、儿童、妇女的治疗方式，副作用少，应用范围广泛，可作为一种普遍应用的自我保健方法。</view>
+  </view>
+  <view class='p30 time cl'>
+    <view class='l'>服务时长</view>
+    <view class='r'>80分钟</view>
+  </view>
+  <view class='p30 info'>
+    <text>说明\n 1.由结核菌、化脓菌所引起的运动器官病症不宜进行推拿；\n 2.癌症一般不作推拿；\n 3.皮肤病病变损害处，皮开肉绽及烫伤处一般不宜推拿； \n4.正在出血的部位不宜推拿；\n 5.脱位处以整复手法为主；\n 6.妇女在怀孕期和月经期，腹部不宜使用推拿手法；\n 7.患者饥饿时及剧烈运动后，推拿时需防止晕倒。
+    </text>
+  </view>
+  <view class='bottom'>立即购买</view>
+</view>

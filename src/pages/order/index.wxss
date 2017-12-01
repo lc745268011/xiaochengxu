@@ -1,0 +1,25 @@
+/* pages/news/index.wxss */
+.list{background: #fff;height: 120rpx;position: relative;margin-bottom: 20rpx;}
+.leftBtn{width: 19rpx;height: 33rpx;right: 30rpx;}
+.list .avater{width: 100rpx;height: 100rpx;border-radius: 50%;overflow: hidden}
+.list .msg{left: 160rpx;}
+.list .msg .name{font-size: 32rpx;}
+.list .msg .position{font-size: 28rpx;color: #999;margin-left: 10rpx;}
+.star-image {
+  position: relative;
+  /* top: 50rpx; */
+  width: 40rpx;
+  height: 40rpx;
+  src: "../../images/normal.png";
+  top:10rpx;
+
+}
+
+.item {
+  position: absolute;
+  top:0;
+  width: 20rpx;
+  height: 40rpx;
+}
+.list .msg .star{font-size: 26rpx;color: #999;height: 48rpx;line-height: 48rpx;}
+.list .msg .star text{color: #f8c207;display: inline-block;height: 48rpx;line-height: 48rpx;}

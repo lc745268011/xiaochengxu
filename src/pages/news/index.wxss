@@ -1,0 +1,5 @@
+/* pages/news/index.wxss */
+.list{background: #fff;height: 120rpx;position: relative;border-bottom: 1rpx solid #efefef}
+.leftBtn{width: 19rpx;height: 33rpx;right: 30rpx;}
+.list .content{font-size: 28rpx;}
+.list .dateTime{font-size: 26rpx;color: #999;right: 60rpx}

@@ -1,0 +1,10 @@
+/* pages/mine/index.wxss */
+.top{height: 150rpx;width: 100%;position: relative;box-sizing: border-box;background: #fff;margin-bottom: 20px;}
+.top .touxiang{width: 100rpx;height: 100rpx;border-radius: 50%;border: 1rpx solid #ccc}
+.top .nickname{left: 160rpx;width:500rpx;overflow: hidden ;font-size: 34rpx;color: #333333}
+.top .nickname .tel{color: #999999;font-size: 28rpx;margin-top: 6rpx;}
+.leftBtn{width: 19rpx;height: 33rpx;right: 30rpx;}
+.middle .list{position: relative;background: #fff;height: 110rpx;border-bottom: 1rpx solid #efefef}
+.middle .list .icon{width: 42rpx;height: 42rpx}
+.middle .list .title{left: 96rpx;font-size: 32rpx;}
+.middle .list:nth-child(4){border-bottom: 0;margin-bottom: 20rpx;}

@@ -1,0 +1,25 @@
+<!--pages/order/index.wxml-->
+<view class='container'>
+  <block wx:for="{{aaa}}" wx:for-item="itemName" wx:key="id">
+    <view class='list p30' bindtap='goDetail' id='{{itemName.id}}' bindtap='goDetail'>
+      <image class='vCenter avater' src='{{itemName.avater}}'></image>
+      <view class='msg vCenter'>
+        <view>
+          <text class='name'>{{itemName.name}}</text>
+          <text class='position'>{{itemName.position}}</text>
+        </view>
+        <view class='star'>
+          评分：
+          <block wx:for="{{itemName.stars}}" wx:for-item="aaa1" wx:key="id">
+            <image class="star-image" style="margin-right: 20rpx" src="{{itemName.key > aaa1 ?(itemName.key-aaa1 == 0.5?itemName.halfSrc:itemName.selectedSrc) : itemName.normalSrc}}" data-key="{{itemName.key}}">
+              <view class="item" style="left:0rpx" data-key="{{aaa1+0.5}}" id="{{itemName.id}}"></view>
+              <view class="item" style="left:20rpx" data-key="{{aaa1+1}}" id="{{itemName.id}}"></view>
+            </image>
+          </block>
+          <text>{{itemName.key}}分</text>
+        </view>
+      </view>
+      <image class='leftBtn vCenter' src='/img/left.png'></image>
+    </view>
+  </block>
+</view>

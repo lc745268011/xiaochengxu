@@ -1,0 +1,77 @@
+{
+	"description": "项目配置文件。",
+	"setting": {
+		"urlCheck": true,
+		"es6": true,
+		"postcss": true,
+		"minified": true,
+		"newFeature": true
+	},
+	"compileType": "miniprogram",
+	"libVersion": "1.5.4",
+	"appid": "wx9308df3f6cc6fed3",
+	"projectname": "%E6%B5%8B%E8%AF%95",
+	"condition": {
+		"search": {
+			"current": -1,
+			"list": []
+		},
+		"conversation": {
+			"current": -1,
+			"list": []
+		},
+		"miniprogram": {
+			"current": -1,
+			"list": [
+				{
+					"id": 0,
+					"name": "分类详情",
+					"pathName": "pages/cateDetail/index",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "加载更多",
+					"pathName": "pages/ceshi/index",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "我的",
+					"pathName": "pages/mine/index",
+					"query": ""
+				},
+				{
+					"id": 3,
+					"name": "新闻",
+					"pathName": "pages/newsDetail/index",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "预约",
+					"pathName": "pages/order/index",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "评价",
+					"pathName": "pages/evaluate/index",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "jifen ",
+					"pathName": "pages/integral/index",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "pubu",
+					"pathName": "pages/pubu/index",
+					"query": ""
+				}
+			]
+		}
+	}
+}

@@ -1,0 +1,11 @@
+<!--pages/news/index.wxml-->
+<view class='container'>
+  <block wx:for="{{newListItems}}" wx:key="id">
+    <view class='list p30' bindtap='goDetail' id='{{item.id}}' bindtap='goDetail'>
+      <view class='vCenter content'>{{item.content}}</view>
+      <view class='dateTime vCenter'>{{item.dateTime}}</view>
+      
+      <image class='leftBtn vCenter' src='/img/left.png'></image>
+    </view>
+  </block>
+</view>

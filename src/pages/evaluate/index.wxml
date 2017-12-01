@@ -1,0 +1,33 @@
+<!--pages/evaluate/index.wxml-->
+<view class='container'>
+  <view class='p_picker p30'>
+    <view class='l'>服务</view>
+    <picker bindchange="bindPickerChange" value="{{index}}" range="{{array}}" class='r'>
+      <view class="picker">
+        当前选择：{{array[index]}}
+      </view>
+    </picker>
+  </view>
+  <view class='star p30'>
+    <view class='l'>评分</view>
+    <view class='r'>
+      <block wx:for="{{stars}}">
+        <image class="star-image" style="left: {{item*20}}rpx" src="{{key > item ?(key-item == 0.5?halfSrc:selectedSrc) : normalSrc}}">
+          <view class="item" style="left:0rpx" data-key="{{item+0.5}}" bindtap="selectLeft"></view>
+          <view class="item" style="left:20rpx" data-key="{{item+1}}" bindtap="selectRight"></view>
+        </image>
+      </block>
+    </view>
+  </view>
+  <view class='content'>
+    <view class='title'>服务评价</view>
+    <view class='text'>
+      <textarea auto-height placeholder="有了您的建议，我们将做的更好！" maxlength='-1' ></textarea>
+    </view> 
+  </view>
+  
+  <view style='height:96rpx;'></view>
+  <view class='subBtn'>
+    提交
+  </view>
+</view>

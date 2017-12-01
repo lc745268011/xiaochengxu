@@ -1,0 +1,5 @@
+/* pages/newsDetail/index.wxss */
+.top{padding: 30rpx;background: #fff;margin-bottom: 20rpx;}
+.top .title{font-size: 34rpx;}
+.top .time{font-size: 24rpx;color: #999;margin-top: 10rpx;}
+.content{padding: 30rpx;background: #fff}

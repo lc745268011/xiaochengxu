@@ -1,0 +1,148 @@
+/* pages/cc-index/index.wxss */
+
+.swiper image {
+  width: 100%;
+}
+
+.msg {
+  background-color: #fff;
+  height: 150rpx;
+  position: relative;
+}
+
+.msg .location {
+  width: 22rpx;
+  height: 28rpx;
+}
+
+.msg .r {
+  right: 30rpx;
+}
+
+.msg .callphone {
+  width: 60rpx;
+  height: 60rpx;
+}
+
+.msg .l view:first-child text:first-child {
+  font-size: 34rpx;
+  margin-right: 20rpx;
+}
+
+.msg .l view:first-child text:last-child {
+  color: #999;
+  font-size: 28rpx;
+}
+
+.msg .l view:last-child {
+  height: 40rpx;
+  line-height: 40rpx;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 10rpx;
+}
+
+.msg .l view:last-child text:last-child {
+  color: #999;
+  font-size: 26rpx;
+  margin-left: 20rpx;
+}
+
+.list {
+  height: 190rpx;
+  padding: 36rpx 30rpx;
+  box-sizing: border-box;
+}
+
+.list>view {
+  width: 25%;
+  text-align: center;
+}
+
+.list view .icon {
+  width: 80rpx;
+  height: 80rpx;
+}
+
+.productList {
+  background: #fff;
+  padding: 38rpx 30rpx;
+}
+
+.productList view.center {
+  font-size: 28rpx;
+  margin-bottom: 38rpx;
+}
+
+.productList view.center text {
+  color: #c00;
+}
+
+.productList .yhList {
+  width: 334rpx;
+  margin-right: 20rpx;
+  margin-bottom: 20rpx;
+}
+
+.productList .yhList:nth-child(2n) {
+  margin-right: 0;
+}
+
+.productList .yhList .bottom {
+  border: 1px solid #ccc;
+  border-top: 0;
+  padding: 20rpx;
+}
+
+.productList .yhList>view:first-child, .productList .yhList view image {
+  width: 334rpx;
+  height: 334rpx;
+}
+
+.productList .yhList .title {
+  font-size: 30rpx;
+  color: #333;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  width: 100%;
+}
+
+.productList .yhList .money {
+  position: relative;
+}
+
+.productList .yhList .money .l>view:first-child {
+  font-size: 22rpx;
+  color: #ccc;
+  position: relative;
+}
+
+.productList .yhList .money .l>view:last-child {
+  font-size: 30rpx;
+  color: #23ade5;
+  font-weight: bold;
+}
+
+.productList .yhList .money .line {
+  width: 100%;
+  height: 2rpx;
+  background: #ccc;
+}
+
+.productList .yhList .money .buyBtn, .productList .yhList .money .hBuyBtn {
+  border: 1px solid #23ade5;
+  width: 94rpx;
+  height: 44rpx;
+  text-align: center;
+  line-height: 44rpx;
+  color: #23ade5;
+  border-radius: 8rpx;
+}
+
+.productList .yhList .money .r {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+}

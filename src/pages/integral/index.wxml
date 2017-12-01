@@ -1,0 +1,67 @@
+<view class='container'>
+  <view class='cl p30 top'>
+    <view class='l'>我的积分</view>
+    <view class='r'>{{integral}}
+      <text>积分</text>
+    </view>
+  </view>
+  <view class='productList'>
+    <view class='center'>积分兑换
+      <text>FREE</text>
+    </view>
+    <!-- <view class='cl'>
+      <block wx:for="{{yhItems}}" wx:key="id">
+        <view class='l yhList'>
+          <view bindtap='goDetail' id="{{item.id}}">
+            <image src='{{item.img}}'></image>
+          </view>
+
+          <view class='bottom p30'>
+            <view class='title' bindtap='goDetail' id="{{item.id}}">{{item.name}}{{item.id}}</view>
+            <view class='cl money'>
+              <view class='l'>
+                <view>¥ {{item.xPrice}}</view>
+              </view>
+              <view class='r'>
+                <navigator class='buyBtn' hover-class='hBuyBtn'>兑换</navigator>
+              </view>
+            </view>
+          </view>
+        </view>
+      </block>
+    </view> -->
+    <view class="content">
+      <view class="left">
+        <block wx:for="{{yhItems}}" wx:key="">
+          <template is="item" data="{{...item}}" wx:if="{{index%2==0}}"></template>
+        </block>
+      </view>
+      <view class="right">
+        <block wx:for="{{yhItems}}" wx:key="">
+          <template is="item" data="{{...item}}" wx:if="{{index%2==1}}"></template>
+        </block>
+      </view>
+    </view>
+    <!--  下面是一个模块 -->
+    <template name="item">
+      <view class='l yhList'>
+        <view bindtap='goDetail' id="{{id}}">
+          <image src='{{img}}'></image>
+        </view>
+
+        <view class='bottom p30'>
+          <view class='title' bindtap='goDetail' id="{{id}}">{{name}}{{id}}</view>
+          <view class='cl money'>
+            <view class='l'>
+              <view>¥ {{xPrice}}</view>
+            </view>
+            <view class='r'>
+              <navigator class='buyBtn' hover-class='hBuyBtn'>兑换</navigator>
+            </view>
+          </view>
+        </view>
+      </view>
+
+    </template>
+  </view>
+</view>
