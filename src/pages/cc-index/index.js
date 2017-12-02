@@ -19,7 +19,7 @@ Page({
     interval: 5000,
     duration: 1000,
     navItems: [{
-      img: '/img/icon.png', name: '热门活动',  id: 1 ,url:'../cate/index'
+      img: '/img/icon.png', name: '热门活动',  id: 1 ,url:'../hot/index'
     }, {
         img: '/img/icon2.png', name: '初创新闻', id: 2, url: '../news/index'
     }, {

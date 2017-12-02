@@ -13,7 +13,11 @@
     "pages/logs/index",
     "pages/evaluate/index",
     "pages/integral/index",
-    "pages/pubu/index"
+    "pages/pubu/index",
+    "pages/hot/index",
+    "pages/coupon/index",
+    "pages/setting/index",
+    "pages/user/index"
   ],
   "window":{
     "backgroundTextStyle":"light",

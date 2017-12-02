@@ -1,0 +1,6 @@
+/* pages/user/index.wxss */
+.userList>view{height: 120rpx;line-height: 120rpx;background: #fff;border-bottom: 1rpx solid #efefef}
+.userList>view .l{font-size: 32rpx;}
+.userList>view .r{font-size: 28rpx;position: relative;height: 120rpx;}
+.userList>view .r .copyBtn{border: 0;color: #23ade5;text-align: center;font-size: 24rpx;right: 0;background: #fff;width: 100rpx;padding: 0}
+.userList>view .r .l:first-child{right: 120rpx;}

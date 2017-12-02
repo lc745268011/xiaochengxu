@@ -1,0 +1,23 @@
+<!--pages/user/index.wxml-->
+<view class='userList'>
+  <view class='cl p30'>
+    <view class='l'>微信昵称</view>
+    <view class='r'>{{userInfo.nickName}}</view>
+  </view>
+  <view class='cl p30'>
+    <view class='l'>真实姓名</view>
+    <view class='r'>{{relName}}</view>
+  </view>
+  <view class='cl p30'>
+    <view class='l'>手机号</view>
+    <view class='r'>{{telphone}}</view>
+  </view>
+  <view class='cl p30'>
+    <view class='l'>会员号</view>
+    <view class='r'>{{userId}}</view>
+  </view>
+  <view class='cl p30'>
+    <view class='l'>邀请码</view>
+    <view class='r cl'><text class='l vCenter'>{{invitation}}</text><button class='copyBtn l vCenter' bindtap='click' data-copy="{{invitation}}">点击复制</button></view>
+  </view>
+</view>

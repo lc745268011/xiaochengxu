@@ -6,16 +6,18 @@
       <view>{{userInfo.nickName}}</view>
       <view class='tel'>131 6666 8888</view>
     </view>
-    <image class='r vCenter leftBtn' src='/img/left.png'></image>
+    <navigator url='/pages/setting/index' hover-class='none'>
+      <image class='r vCenter setting' src='/img/setting.png'></image>
+    </navigator>
   </view>
   <view class='middle'>
     <block wx:for="{{navItems}}" wx:key="id">
-    <navigator url='{{item.url}}'>
-      <view class='list p30' id='{{item.id}}'>
-        <image class='l vCenter icon' src='{{item.img}}'></image>
-        <view class='l vCenter title'>{{item.name}}</view>
-        <image class='r vCenter leftBtn' src='/img/left.png'></image>
-      </view>
+      <navigator url='{{item.url}}'>
+        <view class='list p30' id='{{item.id}}'>
+          <image class='l vCenter icon' src='{{item.img}}'></image>
+          <view class='l vCenter title'>{{item.name}}</view>
+          <image class='r vCenter leftBtn' src='/img/left.png'></image>
+        </view>
       </navigator>
     </block>
   </view>

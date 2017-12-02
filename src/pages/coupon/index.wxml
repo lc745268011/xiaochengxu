@@ -1,0 +1,78 @@
+<!--pages/coupon/index.wxml-->
+<view class='nav'>
+  <view class='tab <wx:if {{tab==1?"active":""}}>' id='1' catchtap="jump">未使用</view>
+  <view class='tab <wx:elif {{tab==2?"active":""}}>' id='2' catchtap="jump">已使用</view>
+  <view class='tab <wx:elif {{tab==3?"active":""}}>' id='3' catchtap="jump">已过期</view>
+</view>
+
+<view class='tab-1 <wx:if {{show==1?"show":""}}>'>
+
+
+  <view class='msg_icon' wx:if="{{coupons!=''}}">
+    <block wx:for-items="{{coupons}}" wx:key="name">
+      <view class='coupon'>
+        <image src='/img/img-coupon-1.png' class='img'></image>
+        <view class='money vCenter'>￥
+          <text class='num'>{{item.coupon_num}}</text>
+        </view>
+        <view class='info vCenter'>
+          <view class='summary'>全品类满{{item.use_min_num}}元可用</view>
+          <view class='time'>有效期：{{item.datemax}}</view>
+        </view>
+      </view>
+    </block>
+  </view>
+  <view wx:if="{{coupons==''}}" style="height:{{second_height}}px">
+
+    <view class='none'>
+      您还没有领取优惠券，快去领取吧
+    </view>
+  </view>
+</view>
+
+
+<view class='tab-2  <wx:elif {{show==2?"show":""}}>'>
+  <view class='msg_icon' wx:if="{{coupons_use!=''}}">
+    <block wx:for-items="{{coupons_use}}" wx:key="name">
+      <view class='coupon'>
+        <image src='/img/img-coupon-2.png' class='img'></image>
+        <view class='money vCenter'>￥
+          <text class='num'>{{item.coupon_num}}</text>
+        </view>
+        <view class='info vCenter'>
+          <view class='summary'>全品类满{{item.use_min_num}}</view>
+          <view class='time'>有效期：{{item.datemax}}</view>
+        </view>
+      </view>
+    </block>
+  </view>
+  <view wx:if="{{coupons_use==''}}" style="height:{{second_height}}px">
+    <view class='none'>
+      您还没有使用优惠券，快去使用吧
+
+    </view>
+  </view>
+</view>
+
+<view class='tab-3 <wx:elif {{show==3?"show":""}}>'>
+  <view class='msg_icon' wx:if="{{coupons_old!=''}}">
+    <block wx:for-items="{{coupons_old}}" wx:key="name">
+      <view class='coupon'>
+        <image src='/img/img-coupon-3.png' class='img'></image>
+        <view class='money vCenter'>￥
+          <text class='num'>{{item.coupon_num}}</text>
+        </view>
+        <view class='info vCenter'>
+          <view class='summary'>全品类满{{item.use_min_num}}</view>
+          <view class='time'>有效期：{{item.datemax}}</view>
+        </view>
+      </view>
+    </block>
+  </view>
+  <view wx:if="{{coupons_old==''}}" style="height:{{second_height}}px">
+    <view class='none'>
+      您没有过期的优惠券
+    </view>
+
+  </view>
+</view>

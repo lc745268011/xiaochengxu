@@ -8,3 +8,4 @@
 .middle .list .icon{width: 42rpx;height: 42rpx}
 .middle .list .title{left: 96rpx;font-size: 32rpx;}
 .middle .list:nth-child(4){border-bottom: 0;margin-bottom: 20rpx;}
+.setting{width: 50rpx;height: 50rpx;right: 30rpx;}
