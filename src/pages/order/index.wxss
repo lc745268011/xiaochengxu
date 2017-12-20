@@ -8,8 +8,8 @@
 .star-image {
   position: relative;
   /* top: 50rpx; */
-  width: 40rpx;
-  height: 40rpx;
+  width: 30rpx;
+  height: 30rpx;
   src: "../../images/normal.png";
   top:10rpx;
 

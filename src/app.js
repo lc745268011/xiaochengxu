@@ -37,6 +37,6 @@ App({
     userInfo: null
   },
   getHost: function () {
-    return "https://imooc.com";
+    return "https://wx.ccfancy.com";
   },
 })

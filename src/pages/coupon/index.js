@@ -1,6 +1,6 @@
 // pages/user_coupon/index.js
 const app = getApp();
-
+var base_url = app.getHost();
 Page({
 
   /**
@@ -28,40 +28,16 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-    //var that = this;
-    //var oid = app.globalData.openid;
-    //
-    //wx.request({
-    //  url: app.getHost() + "/inter/user/showcoupons",
-    //  data: {
-    //    oid: oid,
-    //  },
-    //  success: function (res) {
-    //    console.log('检查用户：seccuss');
-    //    console.log(res);
-    //    if (res.data.status == "ok") {
-    //      that.setData({
-    //        coupons: res.data.msg.coupons,
-    //        coupons_use: res.data.msg.coupons_use,
-    //        coupons_old: res.data.msg.coupons_old,
-    //      })
-    //    }
-    //  },
-    //})
-    //wx.getSystemInfo({
-    //  success: function (res) {
-    //    console.log(res);
-    //    // 可使用窗口宽度、高度
-    //    console.log('height=' + res.windowHeight);
-    //    console.log('width=' + res.windowWidth);
-    //    // 计算主体部分高度,单位为px
-    //    that.setData({
-    //      // second部分高度 = 利用窗口可使用高度 - first部分高度（这里的高度单位为px，所有利用比例将300rpx转换为px）
-    //      second_height: res.windowHeight - res.windowWidth / 750 * 196
-    //    })
-    //  }
-    //})
-
+    wx.request({
+      url: app.getHost() + "/api/wxapi/index", //仅为示例，并非真实的接口地址
+      data: {},
+      header: {
+        'content-type': 'application/json' // 默认值
+      },
+      success: function(res) {
+        console.log(res)
+      }
+    })
 
   },
 
