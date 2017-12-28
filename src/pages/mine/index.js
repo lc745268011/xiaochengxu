@@ -50,6 +50,30 @@ Page({
         }
       })
     }
+    var that = this;
+
+    var oid = app.globalData.openid;
+    var userInfo = app.globalData.userInfo;
+    //console.log(oid);
+    // 更新用户信息
+    wx.request({
+      url: app.getHost() + "/api/wxapi/getopenid",
+      data: {
+        oid: oid,
+        userInfo: userInfo
+      },
+      method: 'GET',
+      success: function (res) {
+        console.log('检查用户：seccuss');
+        //console.log(res);
+        if (res.data.status == "1") {
+          app.globalData.user_info = res.data.msg;
+          that.setData({
+            userInfo: res.data.msg
+          })
+        }
+      },
+    })
   },
   getUserInfo: function (e) {
     console.log(e)

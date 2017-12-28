@@ -1,17 +1,46 @@
 //app.js
 App({
   onLaunch: function () {
-    // 展示本地存储能力
-    var logs = wx.getStorageSync('logs') || []
-    logs.unshift(Date.now())
-    wx.setStorageSync('logs', logs)
+      var that = this;
+      // 展示本地存储能力
+      var logs = wx.getStorageSync('logs') || []
+      logs.unshift(Date.now())
+      wx.setStorageSync('logs', logs)
 
-    // 登录
-    wx.login({
-      success: res => {
-        // 发送 res.code 到后台换取 openId, sessionKey, unionId
-      }
-    })
+      wx.login({
+              success: res => {
+              // 发送 res.code 到后台换取 openId, sessionKey, unionId
+              console.log("登陆后获取到的登录信息");
+      console.log(res)
+      //获取用户标识
+      wx.request({
+        url: "https://wx.ccfancy.com/api/wxapi/getopenid",
+          data: {
+              code: res.code,
+          },
+          success: function (res1) {
+              console.log('检查用户：seccuss1');
+              console.log(res1);
+              if (res1.data.status == "ok") {
+                  wx.setStorageSync('oid', res1.data.msg);
+                  that.globalData.openid = res1.data.msg;
+              } else {
+                  //检查失败后处理
+              }
+              console.log(that.globalData.openid);
+          },
+          fail: function () {
+              // fail
+              console.log("fail1")
+          },
+          complete: function () {
+              // complete
+              console.log("complete1")
+          }
+      })
+  }
+})
+
     // 获取用户信息
     wx.getSetting({
       success: res => {
@@ -34,7 +63,9 @@ App({
     })
   },
   globalData: {
-    userInfo: null
+    userInfo: null,
+        user_info: null,
+        openid: "",
   },
   getHost: function () {
     return "https://wx.ccfancy.com";

@@ -8,11 +8,7 @@ Page({
    */
   data: {
     userInfo: {},
-    imgUrls: [
-      'http://img02.tooopen.com/images/20150928/tooopen_sy_143912755726.jpg',
-      'http://img06.tooopen.com/images/20160818/tooopen_sy_175866434296.jpg',
-      'http://img06.tooopen.com/images/20160818/tooopen_sy_175833047715.jpg'
-    ],
+    imgUrls: [],
     indicatorDots: true,
     indicatorActiveColor: '#23ade5',
     indicatorColor: '#fff',
@@ -20,6 +16,7 @@ Page({
     interval: 5000,
     duration: 1000,
     navItems: [],
+    picUrl:'https://wx.ccfancy.com/upload/',
     yhItems: [{
       img: '/img/bjt.png', name: '足疗体验月卡1', yPrice: '298.00', xPrice: '198.00', id: 1, num: 1
     }, {
@@ -72,7 +69,6 @@ Page({
    */
   onLoad: function (options) {
     var that = this;
-    console.log(this.data.canIUse)
     if (app.globalData.userInfo) {
       this.setData({
         userInfo: app.globalData.userInfo,
@@ -101,15 +97,14 @@ Page({
     }
     wx.request({
       url: app.getHost() + "/api/wxapi/index", //仅为示例，并非真实的接口地址
-      data: {},
+      data: { userInfo},
       header: {
         'content-type': 'application/json' // 默认值
       },
       success: function (res) {
-        console.log(res.data.info.navItems)
         that.setData({
-          navItems: res.data.info.navItems
-         
+          navItems: res.data.info.navItems,
+          imgUrls: res.data.info.imgUrls
         })
       }
     })
