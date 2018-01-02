@@ -21,7 +21,7 @@
 			"list": []
 		},
 		"miniprogram": {
-			"current": -1,
+			"current": 10,
 			"list": [
 				{
 					"id": 0,
@@ -82,6 +82,11 @@
 					"name": "优惠券",
 					"pathName": "pages/coupon/index",
 					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "card",
+					"pathName": "pages/card/index"
 				}
 			]
 		}

@@ -17,7 +17,9 @@
     "pages/hot/index",
     "pages/coupon/index",
     "pages/setting/index",
-    "pages/user/index"
+    "pages/user/index",
+    "pages/card/index"
+
   ],
   "window":{
     "backgroundTextStyle":"light",

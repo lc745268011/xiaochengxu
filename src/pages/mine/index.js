@@ -8,15 +8,17 @@ Page({
   data: {
     userInfo: {},
     navItems: [{
-      img: '/img/mine-7.png', name: '个人信息', id: 1, url: "../user/index"
+      img: '/img/mine-8.png', name: '会员卡', id: 1, url: "../card/index"
+    }, {
+      img: '/img/mine-7.png', name: '个人信息', id: 2, url: "../user/index"
     },{
-      img: '/img/mine-1.png', name: '我的优惠券', id: 2, url: "../coupon/index"
+      img: '/img/mine-1.png', name: '我的优惠券', id: 3, url: "../coupon/index"
     }, {
-      img: '/img/mine-2.png', name: '我的积分', id: 3, url: "../news/index"
+      img: '/img/mine-2.png', name: '我的积分', id: 4, url: "../news/index"
     }, {
-      img: '/img/mine-4.png', name: '我要预约', id: 4, url: "../cateDetail/index"
+      img: '/img/mine-4.png', name: '我要预约', id: 5, url: "../cateDetail/index"
     }, {
-      img: '/img/mine-5.png', name: '反馈建议', id: 5, url: "../evaluate/index"
+      img: '/img/mine-5.png', name: '反馈建议', id: 6, url: "../evaluate/index"
     }]
   },
 
