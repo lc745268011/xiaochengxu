@@ -8,7 +8,7 @@
 </view>
 <view>
   <block wx:for="{{card}}" wx:key="id">
-    <view bindtap='slideBox' class='title' id='{{item.id}}' data-status="{{item.status}}">{{item.title}}</view>
-    <view class="{{slideStatus == false ? 'hide slideup' : 'slide slidedown'}}">{{item.con}}</view>
+    <view bindtap='slideBox' class='title' id='{{item.id}}' data-status="{{item.slideStatus}}">{{item.title}}</view>
+    <view class="{{item.slideStatus == false ? 'hide slideup' : 'slide slidedown'}}">{{item.con}}</view>
   </block>
 </view>

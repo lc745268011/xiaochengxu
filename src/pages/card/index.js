@@ -9,21 +9,29 @@ Page({
     card:[{
       id: 1, slideStatus: false, title: '题目1', con:'展开1'
     }, {
-      id: 2, slideStatus: false, title: '题目2', con: '展开2'
+      id: 2, slideStatus: true, title: '题目2', con: '展开2'
     }]
   },
   //点击滑动展开收起
   slideBox:function(e){
-    console.log(this.data.slideStatus)
-    if (this.data.slideStatus==false){
+    var a=e.currentTarget.id,
+      slideStatus = e.currentTarget.dataset.slideStatus
+    
+    if (this.data.card[a - 1].slideStatus ==false){
+      console.log(111)
+      
+      this.data.card[a - 1].slideStatus = true
       this.setData({
-        slideStatus:true
+        card: this.data.card
       })
+      
     }else{
+      this.data.card[a - 1].slideStatus = false
       this.setData({
-        slideStatus: false
+        card: this.data.card
       })
     }
+    
   },
   /**
    * 生命周期函数--监听页面加载
