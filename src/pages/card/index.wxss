@@ -1,0 +1,33 @@
+/* pages/card/index.wxss */
+.vipCard{margin: 10rpx auto;position: relative}
+.vipCard,.vipCard image{width: 700rpx;height: 420rpx;}
+.vipCard .no{position: absolute;right: 30rpx;bottom: 30rpx;color: #bf9c46;font-size: 28rpx;}
+.receive button{font-size: 28rpx;width: 300rpx;text-align: center;margin: 20rpx auto;background: #F3BEBE;color: #fff}
+ .hide{display: none} 
+.slide{background: #fff;padding: 30rpx;}
+.title{font-size: 30rpx;line-height: 100rpx;height: 100rpx}
+@keyframes slidedown {
+    from {
+        transform: translateY(-100rpx);
+    }
+    to {
+        transform: translateY(0);
+    }
+}
+@keyframes slideup {
+    from {
+        transform: translateY(0);
+        display: block
+    }
+    to {
+        transform: translateY(-100rpx);
+        display: none
+    }
+}
+.slidedown {
+    animation: slidedown 0.5s linear ;
+}
+.slideup {
+    animation: slideup 0.5s linear ;
+}
+
