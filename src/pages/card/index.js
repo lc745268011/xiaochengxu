@@ -7,9 +7,9 @@ Page({
   data: {
     
     card:[{
-      id: 1, slideStatus: false, title: '题目1', con:'展开1'
+      id: 1, slideStatus: true, title: '关注有礼', con:'凡关注"开心俱乐会"微信公众号并成为会员即可获赠"关注有礼礼品"一份（礼品见店面告示！）'
     }, {
-      id: 2, slideStatus: true, title: '题目2', con: '展开2'
+        id: 2, slideStatus: false, title: '会员消费折扣', con: '不定期发送特别优惠券，凡微信会员均可享受。'
     }]
   },
   //点击滑动展开收起

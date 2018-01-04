@@ -6,9 +6,12 @@
 <view class='receive'>
   <button>领取会员卡</button>
 </view>
-<view>
+<view class='info'>
   <block wx:for="{{card}}" wx:key="id">
-    <view bindtap='slideBox' class='title' id='{{item.id}}' data-status="{{item.slideStatus}}">{{item.title}}</view>
+  <view class='list'>
+  <view bindtap='slideBox' class="title {{item.slideStatus == false ? '' : 'active'}}" id='{{item.id}}' data-status="{{item.slideStatus}}">{{item.title}}</view>
     <view class="{{item.slideStatus == false ? 'hide slideup' : 'slide slidedown'}}">{{item.con}}</view>
+  </view>
+    
   </block>
 </view>

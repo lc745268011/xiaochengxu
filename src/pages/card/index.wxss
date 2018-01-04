@@ -4,8 +4,8 @@
 .vipCard .no{position: absolute;right: 30rpx;bottom: 30rpx;color: #bf9c46;font-size: 28rpx;}
 .receive button{font-size: 28rpx;width: 300rpx;text-align: center;margin: 20rpx auto;background: #F3BEBE;color: #fff}
  .hide{display: none} 
-.slide{background: #fff;padding: 30rpx;}
-.title{font-size: 30rpx;line-height: 100rpx;height: 100rpx}
+.slide{background: #fff;padding:20rpx 30rpx;width: 100%;border:2rpx solid #efefef;border-top: none;box-sizing: border-box;font-size: 26rpx;}
+.title{font-size: 30rpx;line-height: 80rpx;height: 80rpx;background: #fff;width: 100%;border:2rpx solid #efefef;padding: 0 30rpx;box-sizing: border-box}
 @keyframes slidedown {
     from {
         transform: translateY(-100rpx);
@@ -17,11 +17,9 @@
 @keyframes slideup {
     from {
         transform: translateY(0);
-        display: block
     }
     to {
         transform: translateY(-100rpx);
-        display: none
     }
 }
 .slidedown {
@@ -30,4 +28,6 @@
 .slideup {
     animation: slideup 0.5s linear ;
 }
-
+/* .info{width: 100%;padding: 0 30rpx;} */
+.info .list{margin-bottom: 20rpx;width: 100%;padding: 0 30rpx;box-sizing: border-box}
+.info .list .active{background: #eee;color: #444}
