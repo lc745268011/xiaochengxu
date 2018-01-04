@@ -21,9 +21,9 @@ App({
           success: function (res1) {
               console.log('检查用户：seccuss1');
               console.log(res1);
-              if (res1.data.status == "ok") {
-                  wx.setStorageSync('oid', res1.data.msg);
-                  that.globalData.openid = res1.data.msg;
+              if (res1.data.state == "1") {
+                  wx.setStorageSync('oid', res1.data.info);
+                  that.globalData.openid = res1.data.info;
               } else {
                   //检查失败后处理
               }
