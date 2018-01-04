@@ -5,7 +5,7 @@ Page({
    * 页面的初始数据
    */
   data: {
-    
+    vipNum:'',
     card:[{
       id: 1, slideStatus: true, title: '关注有礼', con:'凡关注"开心俱乐会"微信公众号并成为会员即可获赠"关注有礼礼品"一份（礼品见店面告示！）'
     }, {
@@ -32,6 +32,12 @@ Page({
       })
     }
     
+  },
+  //领取会员卡
+  receive:function(){
+    this.setData({
+      vipNum:'000001'
+    })
   },
   /**
    * 生命周期函数--监听页面加载

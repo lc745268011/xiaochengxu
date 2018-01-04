@@ -6,6 +6,7 @@
  .hide{display: none} 
 .slide{background: #fff;padding:20rpx 30rpx;width: 100%;border:2rpx solid #efefef;border-top: none;box-sizing: border-box;font-size: 26rpx;}
 .title{font-size: 30rpx;line-height: 80rpx;height: 80rpx;background: #fff;width: 100%;border:2rpx solid #efefef;padding: 0 30rpx;box-sizing: border-box}
+.nohas{display: none}
 @keyframes slidedown {
     from {
         transform: translateY(-100rpx);
