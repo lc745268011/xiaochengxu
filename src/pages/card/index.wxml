@@ -1,17 +1,17 @@
 <!--pages/card/index.wxml-->
 <view class='vipCard'>
   <image src='/img/vipCard.png'></image>
-  <view class='no'>NO.000001</view>
+  <view class="no {{vipNum==''?'nohas':''}}">NO.{{vipNum}}</view>
 </view>
 <view class='receive'>
-  <button>领取会员卡</button>
+  <button bindtap='receive' class="{{vipNum==''?'':'nohas'}}">领取会员卡</button>
 </view>
 <view class='info'>
   <block wx:for="{{card}}" wx:key="id">
-  <view class='list'>
-  <view bindtap='slideBox' class="title {{item.slideStatus == false ? '' : 'active'}}" id='{{item.id}}' data-status="{{item.slideStatus}}">{{item.title}}</view>
-    <view class="{{item.slideStatus == false ? 'hide slideup' : 'slide slidedown'}}">{{item.con}}</view>
-  </view>
-    
+    <view class='list'>
+      <view bindtap='slideBox' class="title {{item.slideStatus == false ? '' : 'active'}}" id='{{item.id}}' data-status="{{item.slideStatus}}">{{item.title}}</view>
+      <view class="{{item.slideStatus == false ? 'hide slideup' : 'slide slidedown'}}">{{item.con}}</view>
+    </view>
+
   </block>
 </view>
