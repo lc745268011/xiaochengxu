@@ -31,6 +31,7 @@ App({
               console.log(that.globalData.openid);
           },
           fail: function () {
+
               // fail
               console.log("fail1")
           },

@@ -54,6 +54,7 @@ Page({
     }
     var that = this;
 
+
     var oid = app.globalData.openid;
     var userInfo = app.globalData.userInfo;
     //console.log(oid);
