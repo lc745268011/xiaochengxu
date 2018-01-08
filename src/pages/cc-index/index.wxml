@@ -25,8 +25,8 @@
   <view class='list p30 cl'>
     <block wx:for="{{navItems}}" wx:key="id">
       <view class='l'>
-        <navigator url='{{item.url}}' hover-class="none">
-          <image src='{{item.img}}' class='icon'></image>
+        <navigator url='{{item.href}}' hover-class="none">
+          <image src='https://wx.ccfancy.com/upload/{{item.image}}' class='icon'></image>
           <view>{{item.name}}</view>
         </navigator>
       </view>
