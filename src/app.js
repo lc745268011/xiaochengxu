@@ -14,10 +14,11 @@ App({
       console.log(res)
       //获取用户标识
       wx.request({
-        url: "https://wx.ccfancy.com/api/wxapi/getopenid",
+        url: "https://wx.ccfancy.com/api/wxlogin/getopenid",
           data: {
               code: res.code,
           },
+          method: 'POST',
           success: function (res1) {
               console.log('检查用户：seccuss1');
               console.log(res1);

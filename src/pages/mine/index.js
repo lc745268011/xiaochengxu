@@ -59,12 +59,12 @@ Page({
     //console.log(oid);
     // 更新用户信息
     wx.request({
-      url: app.getHost() + "/api/wxapi/getopenid",
+      url: app.getHost() + "/api/wxlogin/getwxinfo",
       data: {
         oid: oid,
         userInfo: userInfo
       },
-      method: 'GET',
+      method: 'POST',
       success: function (res) {
         console.log('检查用户：seccuss');
         //console.log(res);
